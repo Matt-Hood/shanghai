@@ -1,0 +1,139 @@
+/* Styles for Survey Page */
+body{
+	background-color:#D5D5D5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.heading{
+	text-align:center;
+	background-color:#6D7993;
+	color: ghostwhite;
+	margin: 70px 30px 10px 30px;
+	padding:10px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+	background-color: #6D7993;
+    color: ghostwhite;
+	padding:10px 20px;
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing:2px;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing:2px;
+	padding-bottom: 15px;
+	margin-top: 10px;
+}
+
+h2 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.summary h2, .survey h2, .admin h2 {
+    margin-top: 50px;
+}
+
+.row {
+    width: 100%;
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+
+.survey, .albums, .summary, .admin {
+	margin: 10px 30px 10px 30px;
+	background-color: ghostwhite;
+	color: black;
+	padding:20px;
+}
+
+p, li, label {
+	font-family: 'Lato', sans-serif;
+	letter-spacing: 1px;
+    line-height: 1.75em;
+    font-size: 18px;
+}
+
+.thanks {
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    padding: 20px;
+}
+
+.page-footer{
+	background-color:#6D7993;
+	color: ghostwhite;
+	margin:10px 30px 10px 30px;
+	padding:10px;
+}
+
+.page-footer a{
+	color:#D5D5D5;
+}
+
+.page-footer a:hover{
+	color: #3399ff;
+}
+.right-side-source{
+	margin-top: 40px;
+
+}
+
+.credits{
+	margin-top: 20px;
+}
+
+.credits p{
+	line-height: 15px;
+	padding-left: 25px;
+}
+
+/*End of Survey Styles */
+
+/* Admin styles */
+
+table {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+th {
+    padding: 10px;
+    text-align: center;
+}
+
+td {
+    padding: 5px;
+}
+
+th, td {
+    max-width: 180px;
+    word-wrap: break-word;
+}
+
+/*End of Admin Styles*/
+
+.response {
+	padding-left: 25px;
+	background-color: ghostwhite;
+}
+
+.container-fluid {
+    padding: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
