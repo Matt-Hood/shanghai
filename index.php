@@ -3,6 +3,7 @@ $currentTitle = "Assignment 8 - Linkin Park";
 include "inc/top.inc";
 ?>
 
+<<<<<<< HEAD
     <!-- Navigation -->
     <nav class="main-menu">
         <span class="logo"><a href="#">CSC174 Assignment #8</a></span>
@@ -31,11 +32,31 @@ include "inc/top.inc";
         </div>
     </div>
     <!--<div class="summary" id="summary">
+=======
+<!-- Navigation -->
+<nav class="main-menu">
+    <span class="logo"><a href="#">CSC174 Assignment #8</a></span>
+    <ul>
+        <li><span>Go to: </span></li>
+        <li><a class="slide" href="#summary">Summary</a></li>
+        <li><a class="slide" href="#survey">Survey</a></li>
+        <li><a class="slide" href="#credits">Credits</a></li>
+        <li><a href="user-account.php">User Account</a></li>
+    </ul>
+</nav>
+
+<!-- Bio -->
+<div class="summary" id="summary">
+>>>>>>> 3e87032ccdbc1ac2d866450abc69efda5b8be4cb
     <h2>Summary</h2>
     <div id="summary" class="row align-items-center">
         <div class="column col-md-4 col-sm-4 col-xs-12">
             <!-- Image from http://www.billboard.com/articles/columns/rock/7325484/linkin-park-2016-album-charity-poker-tournament-interview -->
+<<<<<<< HEAD
     <!--<img src="images/band.jpg" class="bandpic" alt="Linkin_Park">
+=======
+            <img src="images/band.jpg" class="bandpic" alt="Linkin_Park">
+>>>>>>> 3e87032ccdbc1ac2d866450abc69efda5b8be4cb
         </div>
 
         <div class="column col-md-8 col-sm-8 col-xs-12">
@@ -44,7 +65,7 @@ include "inc/top.inc";
             <p>Linkin Park is an American rock band. They formed in 1996, in the Los Angeles suburb of Agoura Hills, around the core of high school friends Mike Shinoda, Brad Delson, and Rob Bourdon. Joe Hahn and Dave Farrell soon joined, as well as a singer named Mark Wakefield, who left by 1999, when the group was called Hybrid Theory. He was replaced by Chester Bennington, an Arizonan who'd been in a group called Grey Daze.</p>
         </div>
     </div>
-</div>-->
+</div>
 
     <!-- End Bio -->
 
@@ -224,18 +245,35 @@ include "inc/top.inc";
         <!-- End One More Light -->
     </div>
 
+<<<<<<< HEAD
     <!-- Start Form -->
     <div class="survey" id="survey">
         <form method="POST" action="survey-processor.php">
 
             <?php
+=======
+<!-- Start Form -->
+
+
+<div class="survey" id="survey">
+    <form method="POST" action="survey-processor.php">
+
+        <?php
+     
+>>>>>>> 3e87032ccdbc1ac2d866450abc69efda5b8be4cb
         include "inc/survey.inc";
-        ?>
+    
+        ?> 
 
         </form>
     </div>
     <!-- End Form -->
 
+<<<<<<< HEAD
     <?php
+=======
+<?php
+
+>>>>>>> 3e87032ccdbc1ac2d866450abc69efda5b8be4cb
 include "inc/bottom.inc";
 ?>
