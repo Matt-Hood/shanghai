@@ -7,16 +7,40 @@
 <link rel="stylesheet" href="css/overrides.css">
 <link rel="stylesheet" href="css/navigation.css">
 <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans:400,700" rel="stylesheet">
-<title> <?php echo $currentTitle ?> </title>
+<title><?php echo $currentTitle ?></title>
+
+<script type="text/javascript">
+function saveEdits() {
+
+//get the editable element
+var editElem = document.getElementById("edit");
+
+//get the edited element content
+var userVersion = editElem.innerHTML;
+
+//save the content to local storage
+localStorage.userEdits = userVersion;
+
+//write a confirmation to the user
+document.getElementById("update").innerHTML="Edits saved!";
+
+}
+function checkEdits() {
+
+//find out if the user has previously saved edits
+if(localStorage.userEdits!=null)
+	document.getElementById("edit").innerHTML=localStorage.userEdits;
+}
+</script>
 
 </head>
 
-<body>
+<body onload="checkEdits()">
 <div class="container">
 
 <header>
 <div class="heading">
-<h1>  </h1>
+<h1><?php echo $currentTitle ?></h1>
 </div>
 
 			<div class="login-top">

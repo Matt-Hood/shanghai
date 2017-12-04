@@ -1,6 +1,6 @@
 <?php
 $currentTitle = "Assignment 8 - Linkin Park";
-include "inc/top.inc";
+include "inc/admintop.inc";
 ?>
 
 <!-- Navigation -->
@@ -179,6 +179,7 @@ include "inc/top.inc";
 
     <!-- One More Light -->
 
+<div id="edit" contenteditable="true">
     <div class="row align-items-center">
         <div class="column col-md-4 col-sm-4 col-xs-12">
             <!-- Image From https://en.wikipedia.org/wiki/One_More_Light -->
@@ -197,27 +198,26 @@ include "inc/top.inc";
             </ul>
         </div>
     </div>
+    </div>
+    <input type="button" value="save my edits" onclick="saveEdits()"/>
+
+<div id="update"> Edit the text and click to save for next time</div>
     <hr>
     <!-- End One More Light -->
 </div>
 
 <!-- Start Form -->
-
-
 <div class="survey" id="survey">
     <form method="POST" action="survey-processor.php">
 
         <?php
-     
         include "inc/survey.inc";
-    
-        ?> 
+        ?>
 
     </form>
 </div>
 <!-- End Form -->
 
 <?php
-
 include "inc/bottom.inc";
 ?>
