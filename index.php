@@ -17,11 +17,22 @@ include "inc/top.inc";
 
 <!-- Bio -->
 <div class="summary" id="summary">
+<div class="jumbotron">
+  <h1 class="display-3">LINKIN PARK OFFICIAL SITE</h1>
+  <p class="lead">PRE ORDER ONE MORE LIGHT LIVE - AVAILABLE DECEMBER 15TH!</p>
+  <hr class="my-4">
+  <p>We decided to do our survery on Linkin Park because it is a band that we thought most people would be familiar with. In recent news, lead localist Chester Bennington died and we thought that this survey would pay tribute to him and the band.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </p>
+</div>
+</div>
+<!--<div class="summary" id="summary">
     <h2>Summary</h2>
     <div id="summary" class="row align-items-center">
         <div class="column col-md-4 col-sm-4 col-xs-12">
             <!-- Image from http://www.billboard.com/articles/columns/rock/7325484/linkin-park-2016-album-charity-poker-tournament-interview -->
-            <img src="images/band.jpg" class="bandpic" alt="Linkin_Park">
+            <!--<img src="images/band.jpg" class="bandpic" alt="Linkin_Park">
         </div>
 
         <div class="column col-md-8 col-sm-8 col-xs-12">
@@ -30,7 +41,7 @@ include "inc/top.inc";
             <p>Linkin Park is an American rock band. They formed in 1996, in the Los Angeles suburb of Agoura Hills, around the core of high school friends Mike Shinoda, Brad Delson, and Rob Bourdon. Joe Hahn and Dave Farrell soon joined, as well as a singer named Mark Wakefield, who left by 1999, when the group was called Hybrid Theory. He was replaced by Chester Bennington, an Arizonan who'd been in a group called Grey Daze.</p>
         </div>
     </div>
-</div>
+</div>-->
 
 <!-- End Bio -->
 
