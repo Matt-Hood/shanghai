@@ -1,17 +1,22 @@
-<?php 
 
-// connect to DB
-$servername = "localhost";
-$username = "cs174";
-$password = "default";
-$database = "cs174";
+ <?php
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $database);
-
-// Check connection
-if ($conn->connect_error) {
-    die('<p style="color:red">'."Database connection failed: " . $conn->connect_error);
-}
-// END of connect to DB
-?>
+ // this will avoid mysql_connect() deprecation error.
+ error_reporting( ~E_DEPRECATED & ~E_NOTICE );
+ // but I strongly suggest you to use PDO or MySQLi.
+ 
+ define('DBHOST', 'localhost');
+ define('DBUSER', 'cs174');
+ define('DBPASS', 'default');
+ define('DBNAME', 'cs174');
+ 
+$conn = mysql_connect(DBHOST,DBUSER,DBPASS);
+ $dbcon = mysql_select_db(DBNAME);
+ 
+ if ( !$conn ) {
+  die("Connection failed : " . mysql_error());
+ }
+ 
+ if ( !$dbcon ) {
+  die("Database Connection failed : " . mysql_error());
+ }

@@ -14,15 +14,25 @@ function saveEdits() {
 
 //get the editable element
 var editElem = document.getElementById("edit");
+var editElem1 = document.getElementById("edit1");
+var editElem2= document.getElementById("edit2");
+var editElem3 = document.getElementById("edit3");
+var editElem4 = document.getElementById("edit4");
+
 
 //get the edited element content
 var userVersion = editElem.innerHTML;
+var userVersion1 = editElem1.innerHTML;
+var userVersion2 = editElem2.innerHTML;
+var userVersion3 = editElem3.innerHTML;
+var userVersion4 = editElem4.innerHTML;
 
 //save the content to local storage
-localStorage.userEdits = userVersion;
+localStorage.userEdits = userVersion|userVersion1|userVersion2|userVersion3|userVersion4;
 
 //write a confirmation to the user
 document.getElementById("update").innerHTML="Edits saved!";
+document.getElementById("update1").innerHTML="Edits saved!";
 
 }
 function checkEdits() {
@@ -30,6 +40,10 @@ function checkEdits() {
 //find out if the user has previously saved edits
 if(localStorage.userEdits!=null)
 	document.getElementById("edit").innerHTML=localStorage.userEdits;
+	document.getElementById("edit1").innerHTML=localStorage.userEdits;
+	document.getElementById("edit2").innerHTML=localStorage.userEdits;
+	document.getElementById("edit3").innerHTML=localStorage.userEdits;
+	document.getElementById("edit4").innerHTML=localStorage.userEdits;
 }
 </script>
 
@@ -40,27 +54,8 @@ if(localStorage.userEdits!=null)
 
 <header>
 <div class="heading">
-<h1><?php echo $currentTitle ?></h1>
-</div>
+<h1><a href="search.php">Administrate</a>
 
-			<div class="login-top">
-				<div id="logged-in">
-					<span id="welcome-name"></span>
-					<form method="POST" action="logout.php">
-						<input type="submit" value="Log out"/>
-					</form>
-				</div>
-				<div id="logged-out">
-					<form method="POST" action="login.php">
-						Username: <input type="text" name="username" required/> 
-						Password: <input type="password" name="password" required/>
-						<input type="submit" value="Log in!"/>
-					</form>
-					<a href="createaccount.php">Create Account</a>
-				</div>
-				<script type="text/javascript">
-					showHeader();
-				</script>
-			</div>
+		</h1>
 	
 </header>

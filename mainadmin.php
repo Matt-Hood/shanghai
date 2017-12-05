@@ -1,24 +1,42 @@
+<body>
+<div class="container">
 <?php
-$currentTitle = "Assignment 8 - Linkin Park";
-include "inc/admintop.inc";
+ ob_start();
+ session_start();
+ require_once 'config.php';
+ include "inc/admintop.inc";
+ $currentTitle = $userRow['email'];
+ 
+ // if session is not set this will redirect to login page
+ if( !isset($_SESSION['user']) ) {
+  header("Location: login.php");
+  exit;
+ }
+ // select loggedin users detail
+ $res = mysql_query("SELECT * FROM user WHERE userID = ".$_SESSION['user']);
+ $userRow = mysql_fetch_array($res);
 ?>
 
 <!-- Navigation -->
 <nav class="main-menu">
-    <span class="logo"><a href="#">CSC174 Assignment #8</a></span>
+    <span class="logo"><a href="#">HI! <?php echo $userRow['username']; ?></a></span>
     <ul>
-        <li><span>Go to: </span></li>
+        
+        
+        <li> <a href=login.php>Log in</a></li><li> <a href=createaccount.php>Sign up</a></li>
         <li><a class="slide" href="#summary">Summary</a></li>
         <li><a class="slide" href="#survey">Survey</a></li>
         <li><a class="slide" href="#credits">Credits</a></li>
-        <li><a href="user-account.php">User Account</a></li>
+        <li><a href="myprofile.php">User Account</a></li>
     </ul>
 </nav>
 
 <!-- Bio -->
+
 <div class="summary" id="summary">
+  
     <h2>Summary</h2>
-    <div id="summary" class="row align-items-center">
+    <div id="summary" class="row align-items-center" contenteditable="true">
         <div class="column col-md-4 col-sm-4 col-xs-12">
             <!-- Image from http://www.billboard.com/articles/columns/rock/7325484/linkin-park-2016-album-charity-poker-tournament-interview -->
             <img src="images/band.jpg" class="bandpic" alt="Linkin_Park">
@@ -30,7 +48,12 @@ include "inc/admintop.inc";
             <p>Linkin Park is an American rock band. They formed in 1996, in the Los Angeles suburb of Agoura Hills, around the core of high school friends Mike Shinoda, Brad Delson, and Rob Bourdon. Joe Hahn and Dave Farrell soon joined, as well as a singer named Mark Wakefield, who left by 1999, when the group was called Hybrid Theory. He was replaced by Chester Bennington, an Arizonan who'd been in a group called Grey Daze.</p>
         </div>
     </div>
+    <input type="button" value="save my edits" onclick="saveEdits()"/>
+
+<div id="update1"> Edit the text and click to save for next time</div>
 </div>
+
+
 
 <!-- End Bio -->
 
@@ -52,8 +75,20 @@ include "inc/admintop.inc";
             <h4>Singles</h4>
             <ul>
                 <li>"One Step Closer"</li>
+                <audio controls>
+  <source src="audio/onestepcloser.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
                 <li>"Crawling"</li>
+                <audio controls>
+  <source src="audio/crawling.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
                 <li>"In the End"</li>
+                <audio controls>
+  <source src="audio/intheend.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
             </ul>
         </div>
     </div>
@@ -76,8 +111,14 @@ include "inc/admintop.inc";
                 <h4>Singles</h4>
                 <ul>
                     <li>"Somewhere I belong"</li>
+     
                     <li>"Faint"</li>
+                    
                     <li>"Numb"</li>
+                    <audio controls>
+  <source src="audio/numb.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
                 </ul>
             </div>
         </div>
@@ -100,8 +141,14 @@ include "inc/admintop.inc";
             <h4>Singles</h4>
             <ul>
                 <li>"What I've Done"</li>
+                
                 <li>"Bleed It Out"</li>
+                <audio controls>
+  <source src="audio/bleeditout.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
                 <li>"Shadow of the Day"</li>
+                
             </ul>
         </div>
     </div>
@@ -123,8 +170,14 @@ include "inc/admintop.inc";
             <h4>Singles</h4>
             <ul>
                 <li>"The Catalyst"</li>
+                <audio controls>
+  <source src="audio/thecatalist.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
                 <li>"Waiting for the End"</li>
+               
                 <li>"Burning in the Skies"</li>
+                
             </ul>
         </div>
     </div>
@@ -146,8 +199,14 @@ include "inc/admintop.inc";
             <h4>Singles</h4>
             <ul>
                 <li>"Burn it Down"</li>
+                <audio controls>
+  <source src="audio/burnitdown.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
                 <li>"Lost in the Echo"</li>
+                
                 <li>"Powerless"</li>
+                
             </ul>
         </div>
     </div>
@@ -166,11 +225,18 @@ include "inc/admintop.inc";
             <h3>The Hunting Party</h3>
             <p>The Hunting Party is the sixth studio album by American rock band Linkin Park. The album, produced by band members Mike Shinoda and Brad Delson, was released by Warner Bros. Records and Machine Shop on June 13, 2014. It is the first album since Meteora (2003) not to be produced with Rick Rubin, after producing the band's previous three studio albums.</p>
 
+            
             <h4>Singles</h4>
             <ul>
                 <li>"Guitly All the Same"</li>
+                
                 <li>"Until It's Gone"</li>
+                <audio controls>
+  <source src="audio/untilitsgone.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
                 <li>"Wastelands"</li>
+                
             </ul>
         </div>
     </div>
@@ -193,8 +259,14 @@ include "inc/admintop.inc";
             <h4>Singles</h4>
             <ul>
                 <li>"Heavy"</li>
+                
                 <li>"Talking to Myself"</li>
+               
                 <li>"One More Light"</li>
+                <audio controls>
+  <source src="audio/onemorelight.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
             </ul>
         </div>
     </div>
@@ -205,6 +277,16 @@ include "inc/admintop.inc";
     <hr>
     <!-- End One More Light -->
 </div>
+<script>
+function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
 
 <!-- Start Form -->
 <div class="survey" id="survey">

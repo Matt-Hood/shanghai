@@ -2,14 +2,13 @@
     include_once("config.php");
 session_start();
 
-$_SESSION['user'] = $row['userID'];
     
     if (isset($_SESSION['user']))
     {
        
         
         $sql = " SELECT userID, username, password FROM user WHERE email='$email' ";
-        $_SESSION['user'] = $row['userID'];
+       
         
         $result = $conn->query($sql);
         
@@ -31,13 +30,10 @@ $_SESSION['user'] = $row['userID'];
         }
     }
     else {
-
         echo '<h2>All our members:</h2>';
-
-       // $sql = "SELECT * FROM user";
-        $id = isset($_POST['email']) ? $_POST['email'] : '';
-
-        $sql = "SELECT * FROM user WHERE email ='$id'";
+        $sql = "SELECT * FROM user";
+        
+    
         
         $result = $conn->query($sql);
         
