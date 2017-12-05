@@ -8,7 +8,8 @@ body{
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0;
+    padding: 100px;
+    position: static;
 }
 
 .heading{
@@ -50,7 +51,8 @@ h2 {
     padding-bottom: 20px;
 }
 
-.survey, .albums, .summary, .admin {
+
+.survey, .summary, .albums, .admin {
 	margin: 10px 30px 10px 30px;
 	background-color: ghostwhite;
 	color: black;
@@ -107,22 +109,21 @@ img {
 
 table {
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     width: 80%;
 }
 
 th {
-    padding: 10px;
+    padding: 0px;
     text-align: center;
 }
 
 td {
-    padding: 5px;
+    padding: 0px;
 }
 
 th, td {
-    max-width: 180px;
-    word-wrap: break-word;
+    max-width: 100%;
 }
 
 /*End of Admin Styles*/

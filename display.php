@@ -1,15 +1,15 @@
 <?php 
 //display all users
-include_once("includes/config.php");
+include_once("config.php");
 
-$sql = "SELECT * FROM users";
+$sql = "SELECT * FROM user";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     echo '<table>';
     while($row = $result->fetch_assoc()) {
-        $firstname = $row["firstname"];
-        echo '<tr><td><a href="/profiler/profiles.php?first='.$firstname.'">'.$firstname.'</a><br /></td></tr>';
+        $firstname = $row["username"];
+        echo '<tr><td><a href="/shanghai/profiles.php?first='.$firstname.'">'.$firstname.'</a><br /></td></tr>';
     }
     echo '</table>';
 }

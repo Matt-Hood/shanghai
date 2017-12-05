@@ -40,27 +40,8 @@ if(localStorage.userEdits!=null)
 
 <header>
 <div class="heading">
-<h1><?php echo $currentTitle ?></h1>
-</div>
+<h1><a href="search.php">Administrate</a>
 
-			<div class="login-top">
-				<div id="logged-in">
-					<span id="welcome-name"></span>
-					<form method="POST" action="logout.php">
-						<input type="submit" value="Log out"/>
-					</form>
-				</div>
-				<div id="logged-out">
-					<form method="POST" action="login.php">
-						Username: <input type="text" name="username" required/> 
-						Password: <input type="password" name="password" required/>
-						<input type="submit" value="Log in!"/>
-					</form>
-					<a href="createaccount.php">Create Account</a>
-				</div>
-				<script type="text/javascript">
-					showHeader();
-				</script>
-			</div>
+		</h1>
 	
 </header>

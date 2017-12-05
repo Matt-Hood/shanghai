@@ -9,7 +9,7 @@
  ob_start();
  session_start();
  if( isset($_SESSION['user'])!="" ){
- header("Location: profile.php");
+ header("Location: myprofile.php");
  }
  include_once 'dbconnect.php';
 

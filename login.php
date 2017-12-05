@@ -9,13 +9,13 @@
 
  ob_start();
  session_start();
-  require_once 'dbconnect.php';
+require_once 'config.php';
 
 
  
  // it will never let you open index(login) page if session is set
  if ( isset($_SESSION['user'])!="" ) {
-  header("Location: index.php");
+  header("Location: mainadmin.php");
   exit;
  }
  
@@ -62,7 +62,7 @@
    $_SESSION['user'] = $row['userID'];
    if( $count == 1) {
    
-    header("Location: index.php");
+    header("Location: mainadmin.php");
    } else {
     $errMSG = "Incorrect Credentials, Try again...";
    }
@@ -156,5 +156,6 @@
 </div>
 
 </body>
+
 </html>
 <?php ob_end_flush(); ?>
