@@ -1,21 +1,22 @@
+<!-- Code from http://bit.ly/1VTnl5H used for help-->
 <?php
   
-  $dbhost = "localhost";
-  $dbuser = "cs174";
-  $dbpass = "default";
-  $dbname = "cs174";
+$dbhost = "localhost";
+$dbuser = "urcscon3_shangha";
+$dbpass = "coffee1N";
+$dbname = "urcscon3_shanghai";
 
-  $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+$connection = new mysqli('66.147.242.186', 'urcscon3_shangha', 'coffee1N', 'urcscon3_shanghai');
 
  ob_start();
  session_start();
-  require_once 'dbconnect.php';
+require_once 'include/config.php';
 
 
  
  // it will never let you open index(login) page if session is set
  if ( isset($_SESSION['user'])!="" ) {
-  header("Location: index.php");
+  header("Location: mainadmin.php");
   exit;
  }
  
@@ -62,7 +63,7 @@
    $_SESSION['user'] = $row['userID'];
    if( $count == 1) {
    
-    header("Location: index.php");
+    header("Location: mainadmin.php");
    } else {
     $errMSG = "Incorrect Credentials, Try again...";
    }
@@ -156,5 +157,6 @@
 </div>
 
 </body>
+
 </html>
 <?php ob_end_flush(); ?>

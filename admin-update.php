@@ -1,4 +1,5 @@
 <?php
+session_start();
 /*
 $dbhost = "localhost";
 $dbuser = "urcscon3_shangha";
@@ -8,13 +9,16 @@ $dbname = "urcscon3_shanghai";
 $connection = new mysqli('66.147.242.186', 'urcscon3_shangha', 'coffee1N', 'urcscon3_shanghai');
 */
 
-    $dbhost = "localhost";
-    $dbuser = "people";
-    $dbpass = "default";
-    $dbname = "csc174";
+$dbhost = "localhost";
+$dbuser = "urcscon3_shangha";
+$dbpass = "coffee1N";
+$dbname = "urcscon3_shanghai";
 
-    
-$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+$connection = new mysqli('66.147.242.186', 'urcscon3_shangha', 'coffee1N', 'urcscon3_shanghai');
+
+if( !isset($_SESSION['user']) ) {
+  header("Location: login.php");
+  exit;}
 
 $counter = $_POST['counter'];
 $fname = Trim(stripslashes($_POST['first']));

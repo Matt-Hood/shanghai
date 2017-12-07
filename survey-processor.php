@@ -55,7 +55,7 @@ include "inc/top.inc";
     <span class="logo"><a href="#">CSC174 Assignment #8</a></span>
     <ul>
         <li><span>Go to: </span></li>
-        <li><a href="index.php">Survey</a></li>
+        <li><a href="mainadmin.php">Survey</a></li>
     </ul>
 </nav>
 
@@ -79,7 +79,7 @@ include "inc/top.inc";
                     die("<p>ERROR: Failed to record answers. Please return and try again.</p>");
                 }
                 ?>
-                <a href="index.php">Return to survey</a>
+                <a href="mainadmin.php">Return to survey</a>
             </div><!-- close column -->
         </div><!-- close row -->
     </div>

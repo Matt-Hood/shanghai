@@ -1,17 +1,20 @@
+<!-- Code from http://bit.ly/1VTnl5H used for help-->
 <?php
-  $dbhost = "localhost";
-  $dbuser = "cs174";
-  $dbpass = "default";
-  $dbname = "cs174";
+ 
 
-  $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+$dbhost = "localhost";
+$dbuser = "urcscon3_shangha";
+$dbpass = "coffee1N";
+$dbname = "urcscon3_shanghai";
+
+$connection = new mysqli('66.147.242.186', 'urcscon3_shangha', 'coffee1N', 'urcscon3_shanghai');
 
  ob_start();
  session_start();
  if( isset($_SESSION['user'])!="" ){
- header("Location: profile.php");
+ header("Location: myprofile.php");
  }
- include_once 'dbconnect.php';
+ include_once 'include/dbconnect.php';
 
  $error = false;
 
@@ -27,6 +30,16 @@
 
   $password = Trim(stripslashes($_POST['pass']));
   $password = mysqli_real_escape_string($connection, $password);
+
+  $bio = Trim(stripslashes($_POST['bio']));
+  $bio = mysqli_real_escape_string($connection, $bio);
+
+  $favsong = Trim(stripslashes($_POST['favsong']));
+  $favsong = mysqli_real_escape_string($connection, $favsong);
+
+  $date = Trim(stripslashes($_POST['bday']));
+  $date = mysqli_real_escape_string($connection, $date);
+
  
   
   // basic name validation
@@ -72,10 +85,10 @@
    
 
    $query  = "INSERT INTO user (";
-   $query .= "username, email, password";
+   $query .= "username, email, password, bio, favsong, birthday";
 
   $query .= ") VALUES (";
-  $query .= " '{$name}', '{$email}', '{$password}' "; 
+  $query .= " '{$name}', '{$email}', '{$password}', '{$bio}', '{$favsong}', '{$date}' "; 
   $query .= ")";
 
   $res = mysqli_query($connection, $query);
@@ -161,7 +174,28 @@
                 </div>
                 <span class="text-danger"><?php echo $passError; ?></span>
             </div>
-            
+
+          <div class="form-group">
+             <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+             <input type="bio" name="bio" class="form-control" placeholder="Enter Your Bio" maxlength="15" />
+                </div>
+                <span class="text-danger">  </span>
+            </div>
+            <div class="form-group">
+             <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+             <input type="song" name="favsong" class="form-control" placeholder="Enter Fav Song" maxlength="15" />
+                </div>
+                <span class="text-danger">   </span>
+            </div>
+            <div class="form-group">
+             <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+             <input id = "date" type="date" name="bday" class="form-control" placeholder="Enter Birthday" maxlength="15" />
+                </div>
+                <span class="text-danger">   </span>
+            </div>
             <div class="form-group">
              <hr />
             </div>
