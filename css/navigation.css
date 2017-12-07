@@ -54,8 +54,6 @@ Persistent Navigation
     text-transform: uppercase;
 }
 
-.main-menu a:hover { color: grey; }
-
 
 @media (max-width: 868px){
 

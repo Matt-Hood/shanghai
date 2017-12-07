@@ -1,4 +1,5 @@
 <?php
+
 // 1. Create a database connection
 
 /*
@@ -16,30 +17,42 @@ $query .= "ORDER BY counter ASC";
 $result = mysqli_query($connection, $query);	
 */
 
-    $dbhost = "localhost";
-    $dbuser = "people";
-    $dbpass = "default";
-    $dbname = "csc174";
+ session_start();
+ if( !isset($_SESSION['user']) ) {
+  header("Location: login.php");
+  exit;
+ }
+ 
 
-    $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+
+$dbhost = "localhost";
+$dbuser = "urcscon3_shangha";
+$dbpass = "coffee1N";
+$dbname = "urcscon3_shanghai";
+
+$connection = new mysqli('66.147.242.186', 'urcscon3_shangha', 'coffee1N', 'urcscon3_shanghai');
 
     $query  = "SELECT * ";
-    $query .= "FROM surveytwo ";
+    $query .= "FROM survey ";
     $query .= "ORDER BY counter ASC";
+
+    $result = mysqli_query($connection, $query);
 
 ?>
 
 <?php
 $currentTitle = "Admin Page";
 include "inc/top.inc";
+
+
 ?>
 
 <!-- Navigation -->
 <nav class="main-menu">
-    <span class="logo"><a href="#">CSC174 Assignment #8</a></span>
+    <span class="logo"><a href="#">Admin-Survey</a></span>
     <ul>
         <li><span>Go to: </span></li>
-        <li><a href="index.php">Survey</a></li>
+        <li><a href="mainadmin.php">Home</a></li>
         <li><a href="#table">Table</a></li>
         <li><a href="#delete">Delete</a></li>
         <li><a href="#update">Update</a></li>

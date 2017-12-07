@@ -9,6 +9,7 @@
 <div class="col-md-6 col-sm-6 col-xs-6">
 <h5 class="title">Sources</h5>
 <ul>
+<li><a href="https://en.wikipedia.org/wiki/Linkin_Park" target="_blank">Summary</a></li>
 <li><a href="http://www.rollingstone.com/music/artists/linkin-park/biography" target="_blank">Bio</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Hybrid_Theory" target="_blank">Hybrid Theory</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Meteora_(album)" target="_blank">Meteora</a></li>
@@ -34,8 +35,8 @@
 <!-- Our names -->	
 <div class="col-md-12 col-sm-12 col-xs-12">
 <div class="credits">
-<p>CSC 174 Project 8 Team Shanghai</p>
-<p>© 2017 Copyright: Michelle Bushoy, Jerry Dai, Philip Kallinos, Daniella Bloom </p>
+<p>Linkin Park </p>
+<p>© 2017 Copyright: Matthew Hood and Frankie Romero </p>
 </div>
 </div>
 <!--/.Our names -->

@@ -1,6 +1,6 @@
 /* Styles for Survey Page */
 body{
-	background-color:#D5D5D5;
+	background-color:#0a0a0a;
     margin: 0;
     padding: 0;
 }
@@ -9,27 +9,28 @@ body{
     max-width: 1200px;
     margin: 0 auto;
     padding: 0;
+    
 }
 
 .heading{
 	text-align:center;
-	background-color:#6D7993;
+	background-color: #fcfcfc;
 	color: ghostwhite;
 	margin: 70px 30px 10px 30px;
 	padding:10px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 h2 {
-	background-color: #6D7993;
+	background-color: #3c3e3f;
     color: ghostwhite;
 	padding:10px 20px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	letter-spacing:2px;
 }
 
 h1, h2, h3, h4 {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	letter-spacing:2px;
 	padding-bottom: 15px;
 	margin-top: 10px;
@@ -50,7 +51,8 @@ h2 {
     padding-bottom: 20px;
 }
 
-.survey, .albums, .summary, .admin {
+
+.survey, .summary, .albums, .admin {
 	margin: 10px 30px 10px 30px;
 	background-color: ghostwhite;
 	color: black;
@@ -58,7 +60,7 @@ h2 {
 }
 
 p, li, label {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	letter-spacing: 1px;
     line-height: 1.75em;
     font-size: 18px;
@@ -69,19 +71,18 @@ p, li, label {
 }
 
 img {
-    width: 100%;
     padding: 20px;
 }
 
 .page-footer{
-	background-color:#6D7993;
+	background-color:#3c3e3f;
 	color: ghostwhite;
 	margin:10px 30px 10px 30px;
 	padding:10px;
 }
 
 .page-footer a{
-	color:#D5D5D5;
+	color:#e0e0de;
 }
 
 .page-footer a:hover{
@@ -107,22 +108,22 @@ img {
 
 table {
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     width: 80%;
 }
 
 th {
-    padding: 10px;
+    padding: 0px;
     text-align: center;
 }
 
 td {
-    padding: 5px;
+    padding: 0px;
 }
 
 th, td {
-    max-width: 180px;
-    word-wrap: break-word;
+    max-width: 100%;
+     word-wrap: break-word;
 }
 
 /*End of Admin Styles*/

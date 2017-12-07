@@ -1,8 +1,6 @@
-CSC174 - Assignment #8
+CSC174 - Assignment #9
 
 Team Shanghai
 
-Daniella Bloom
-Michelle Bushoy
-Jerry Dai
-Philip Kallinos
+Matthew Hood 
+Frankie Romero
